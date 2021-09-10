@@ -14,6 +14,7 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
+    ulong  g_data;
     ~MainWindow();
 
 private:
@@ -24,6 +25,7 @@ private:
 
 public slots:
     void turnCode();
+    void turnBIN();
 };
 
 #endif // MAINWINDOW_H
