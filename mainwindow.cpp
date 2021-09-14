@@ -13,9 +13,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //INIT
     //1.1 set HEX LEN 10
-    ui->HEX_QLineEdit->setMaxLength(10);
+    ui->HEX_QLineEdit->setValidator(new QRegExpValidator(QRegExp("[0][xX][0-9a-fA-F]{1,8}|[0-9a-fA-F]{1,8}")));
 
     //2.1set DEC_LINEEDIT
+    ui->DEC_QLineEdit->setValidator(new QRegExpValidator(QRegExp("[0-9]{1,10}")));
 
     //3.1 set PushButton
     QList<QPushButton*> QPushButton_list = findChildren<QPushButton*>();
